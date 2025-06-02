@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>battle</title>
+    <link rel="stylesheet" href="battle.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+
+<body class="noselect">
+  <div id="p1" class="p1">
+
+    <div id="p1_side" class="p1_side">
+      <div id="p1_side_border" class="p1_side_border">Side</div>
+    </div>
+
+
+
+
+    <div id="p1_battle" class="p1_battle"> 
+      <div id="p1_battle_border" class="p1_battle_border">Battle</div>
+
+      <div class="p1_btnWrapalR">
+        <input id="battle_damage_box" type="tel" name="num" class="damageBox" value="0">
+        <a id="battle_damage_box_up" class="btn00" onclick="count(1,1)">▲</a>
+        <a id="battle_damage_box_down" class="btn01" onclick="count(1,-1)">▼</a>
+      </div>
+
+      <!-- <div class="p1_boxTitle">battle
+        <div class="btn">
+          <a id="btn_burn" class="btn01 burn">やけど</a>
+          <a id="btn_poison" class="btn01 poison">どく</a>
+          <a id="btn_sleeping" class="btn01 sleeping">ねむり</a>
+          <a id="btn_paralysis" class="btn01 paralysis">まひ</a>
+          <a id="btn_confusion" class="btn01 confusion">こんらん</a>
+        </div>
+      </div> -->
+    </div>
+
+
+
+
+    <div id="p1_bench" class="p1_bench">
+      <div id="p1_bench_border" class="p1_bench_border_1"></div>
+      <div id="p1_bench_border" class="p1_bench_border_2"></div>
+      <div id="p1_bench_border" class="p1_bench_border_3"></div>
+      <div id="p1_bench_border" class="p1_bench_border_4"></div>
+      <div id="p1_bench_border" class="p1_bench_border_5"></div>
+    </div>
+  
+    <div id="p1_deck" class="p1_deck">Deck
+      <a id="p1_deck_look" class="p1_deck_look">見る</a>
+      <a id="p1_deck_draw" class="p1_deck_draw">一枚引く</a>
+      <a id="p1_deck_cut" class="p1_deck_cut">シャッフル</a>
+    </div>
+
+
+
+    <div id="p1_trash" class="p1_trash">Trash
+      <a id="p1_trash_look" class="p1_trash_look">見る</a>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+<div id="p2" class="p2">
+  <div id="p2_side" class="p2_side">
+    <div id="p2_side_border" class="p2_side_border">Side</div>
+  </div>
+
+
+
+
+
+
+  <div id="p2_battle" class="p2_battle">
+    <div id="p2_battle_border" class="p2_battle_border">Battle
+    </div>
+
+    <div class="p2_btnWrapalR">
+      <input id="battle_damage_box" type="tel" name="num" class="damageBox" value="0">
+      <a id="battle_damage_box_up" class="btn00" onclick="count(2,1)">▲</a>
+      <a id="battle_damage_box_down" class="btn01" onclick="count(2,-1)">▼</a>
+
+    </div>
+
+    <!-- <div class="boxTitle">battle
+      <div class="btn">
+        <a id="btn_burn" class="btn01 burn">やけど</a>
+        <a id="btn_poison" class="btn01 poison">どく</a>
+        <a id="btn_sleeping" class="btn01 sleeping">ねむり</a>
+        <a id="btn_paralysis" class="btn01 paralysis">まひ</a>
+        <a id="btn_confusion" class="btn01 confusion">こんらん</a>
+      </div>
+    </div> -->
+  </div>
+
+
+
+
+  <div id="p2_bench" class="p2_bench">
+    <div id="p2_bench_border" class="p2_bench_border_1"></div>
+    <div id="p2_bench_border" class="p2_bench_border_2"></div>
+    <div id="p2_bench_border" class="p2_bench_border_3"></div>
+    <div id="p2_bench_border" class="p2_bench_border_4"></div>
+    <div id="p2_bench_border" class="p2_bench_border_5"></div>
+  </div>
+  
+  <div id="p2_deck" class="p2_deck">Deck
+      <a id="p2_deck_look" class="p2_deck_look">見る</a>
+      <a id="p2_deck_draw" class="p2_deck_draw">一枚引く</a>
+      <a id="p2_deck_cut" class="p2_deck_cut">シャッフル</a>
+  </div>
+
+
+
+  <div id="p2_trash" class="p2_trash">Trash
+    <a id="p2_trash_look" class="p2_trash_look">見る</a>
+  </div>
+  
+
+</div>
+
+  
+
+
+  
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div id="stadium" class="stadium">Stadium
+
+ </div>
+
+
+
+
+
+
+  <div id="card_put" class="card_put">
+  <div id="test_card" class="test_card"></div>
+  </div>
+
+
+
+
+
+
+
+
+    <script src="battle.js"></script>
+</body>
+</html>

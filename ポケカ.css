@@ -1,0 +1,138 @@
+.body{
+    background-image: none;
+}
+
+
+.screen_0{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);    
+}
+
+.screen_1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    
+}
+
+.screen_2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    
+}
+
+
+.deg_btn0 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    background: #51587b;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: .4s;
+}
+.deg_btn0:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px white;
+    border-bottom: solid 41px transparent;
+    z-index: 0;
+    transition: .4s;
+}
+.deg_btn0:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px transparent;
+    border-bottom: solid 41px white;
+    z-index: 0;
+    transition: .4s;
+}
+.deg_btn0:hover:before,.deg_btn0:hover:after{
+    border-left-width: 25px;
+}
+.deg_btn0:hover{
+    background: #2c3148;
+}
+  
+
+.deg_btn1 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 30px;
+    font-size: 19px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    background: #51587b;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: .4s;
+}
+.deg_btn1:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px white;
+    border-bottom: solid 41px transparent;
+    z-index: 0;
+    transition: .4s;
+}
+.deg_btn1:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 21px transparent;
+    border-bottom: solid 41px white;
+    z-index: 0;
+    transition: .4s;
+}
+.deg_btn1:hover:before,.deg_btn1:hover:after{
+    border-left-width: 25px;
+}
+.deg_btn1:hover{
+    background: #2c3148;
+}
+
+.p1_battle{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

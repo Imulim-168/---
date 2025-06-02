@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ポケカ.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>ポケモンカード☆おんらいん！</title>
+</head>
+<body>
+
+    
+    <div id="sc_0" class="screen_0" style="display:block">
+        <a herf="#" class="deg_btn0" onclick="s0_s1()">
+            ログイン
+        </a>
+        <a herf="#" class="deg_btn1" onclick="s0_s2()">
+            新規登録
+        </a>
+    </div>
+
+
+    <div id="sc_1" class="screen_1" style="display:block">
+        <label>
+            <p>ユーザー名： <input type="text" name="userID" id="user_ID" size="10" style="width:177px;height:21px"></p>
+        </label>
+
+        <label>
+            <p>パスワード： <input type="password" name="pass" id="pass_" size="10" style="width:177px;height:21px"></p>
+        </label>
+
+        <p><input type="submit" onclick="Login()" value="ログイン" style="width:90px; height:26px; position:absolute; top:115%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);"></p>
+    </div>
+
+
+    <div id="sc_2" class="screen_2" style="display:block">
+        <p>ユーザー名： <input type="text" name="userID" id="userID" size="10" style="width:177px;height:21px"></p>
+        <p>パスワード： <input type="password" name="pass" id="pass" size="10" style="width:177px;height:21px"></p>
+        <p><input type="submit" onclick="Regi()" value="登録" style="width:90px; height:26px; position:absolute; top:115%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%);"></p>
+    </div>
+
+    
+
+    <div id="sc_3" class="screen_3">
+        <p>死んでな</p>
+    </div>
+
+
+
+
+
+    <div id="back" class="back" >
+        <p><input type="submit" onclick="Back()" value="戻る" style="width:100px; height:26px; position:absolute; "></p>
+    </div>
+
+    <div id="test" class="test">
+        <div id="p1_battle" class="p1_battle" style="background-color: transparent;"></div>
+        
+
+
+
+
+
+    </div>
+
+
+    <!-- <div class="Deckcode">
+    <input type="te xt" id="deckcode" placeholder="デッキコードを入力" style="width:177px;height:21px">
+    <button onclick="deck()" style="width:96px;height:26px">デッキ決定</button>
+    </div>
+
+
+    <div class="Deckset">
+    <button onclick="deckset()" style="width:96px;height:26px">デッキセット</button>
+    </div> -->
+    
+
+
+
+
+    <script src="ポケカ.js"></script>    
+</body>
+
+
+
+</html>

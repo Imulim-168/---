@@ -1,0 +1,371 @@
+
+.p1{
+    position:absolute;
+    top:500px;
+    left:0px;
+}
+
+
+
+.p1_side_border{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 233px;
+	height: 474px;
+}
+
+
+
+
+.p1_boxTitle {
+    position: absolute;
+    top: -270px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #777777;
+    z-index: 2;
+}
+.p1_battle_border{
+    position: absolute;
+    top: 0px;
+    left: 617.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+
+
+
+.p1_bench_border_1{
+    position: absolute;
+    top: 244px;
+    left: 257.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p1_bench_border_2{
+    position: absolute;
+    top: 244px;
+    left: 437.5px; 
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p1_bench_border_3{
+    position: absolute;
+    top: 244px;
+    left: 617.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+    
+}
+.p1_bench_border_4{
+    position: absolute;
+    top: 244px;
+    left: 797.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p1_bench_border_5{
+    position: absolute;
+    top: 244px;
+    left: 977.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+/* width 1342px */
+
+.p1_deck{
+    position: absolute;
+    top: 0px;
+    left: 1172px;           
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+.p1_trash{
+    position: absolute;
+    top: 244px;
+    left: 1172px;           
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+
+
+
+.p2{
+    position:absolute;
+    transform-origin: 702.5px 50%; /*yoko takasa */
+    transform: rotate(180deg);
+    width: 1342px;
+    height: 474px;
+}
+
+
+.p2_side_border{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 233px;
+	height: 474px;
+}
+
+
+
+
+.p2_boxTitle {
+    position: absolute;
+    top: -270px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #777777;
+    z-index: 2;
+}
+.p2_battle_border{
+    position: absolute;
+    top: 0px;
+    left: 617.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+
+
+
+.p2_bench_border_1{
+    position: absolute;
+    top: 244px;
+    left: 257.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p2_bench_border_2{
+    position: absolute;
+    top: 244px;
+    left: 437.5px; 
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p2_bench_border_3{
+    position: absolute;
+    top: 244px;
+    left: 617.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+    
+}
+.p2_bench_border_4{
+    position: absolute;
+    top: 244px;
+    left: 797.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+.p2_bench_border_5{
+    position: absolute;
+    top: 244px;
+    left: 977.5px;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+/* width 1342px */
+
+.p2_deck{
+    position: absolute;
+    top: 0px;
+    left: 1172px;           
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+.p2_trash{
+    position: absolute;
+    top: 244px;
+    left: 1172px;           
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.test{
+    position:absolute;
+    top: 5px;
+    left: 5px;
+}
+
+
+
+
+.test_card{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 106.857142857142858px;
+  height: 149.428571428571429px;
+  /* 374*2\7
+  523*2/7    */
+  background: url("https://funamushi.net/pokeca_hitorimawashi/img/poke_ura.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.damageBox{
+    width: 35px;
+}
+
+
+
+
+
+.p1_btnWrapalR{
+    position:absolute;
+    left: 700px;
+    top: 2.5px;
+    display:flex;
+
+}
+
+.p2_btnWrapalR{
+    position:absolute;
+    left: 700px;
+    top: 2.5px;
+    display:flex;
+
+}
+
+
+
+
+.p1_deck_look{
+    position:absolute;
+    left: 55px;
+}
+
+.p1_deck_draw{
+    position:absolute;
+    left: 95px;
+}
+
+.p1_deck_cut{
+    position:absolute;
+    left :55px;
+    top: 20px;
+}
+
+
+.p1_trash_look{
+    position:absolute;
+    left: 55px; 
+}
+
+
+
+
+
+
+
+
+.p2_deck_look{
+    position:absolute;
+    left: 55px;
+}
+
+.p2_deck_draw{
+    position:absolute;
+    left: 95px;
+}
+
+.p2_deck_cut{
+    position:absolute;
+    left :55px;
+    top: 20px;
+}
+
+
+.p2_trash_look{
+    position:absolute;
+    left: 55px; 
+}
+
+
+
+
+.stadium{
+    position:absolute;
+    border: 2px solid #999999;
+    border-radius: 10px;
+	width: 170px;
+	height: 230px;
+    top: 380px;
+    left: 360px;    
+
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
