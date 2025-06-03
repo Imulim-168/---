@@ -49,22 +49,16 @@ let p2_Trash = []
 
 let rand
 let Show=[{"id":59,"x":527,"y":527,"fb":1},{"id":"00","x":333,"y":321,"fb":1},{"id":"05","x":810,"y":777,"fb":0},{"id":"08","x":3,"y":111,"fb":0}]
-let card
+let card_img
 
 let p1_place={'00':{},'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{},'09':{},10:{}, 11:{},12:{},13:{},14:{},15:{},16:{},17:{},18:{},19:{},10:{}, 21:{},22:{},23:{},24:{},25:{},26:{},27:{},28:{},29:{},30:{}, 31:{},32:{},33:{},34:{},35:{},36:{},37:{},38:{},39:{},40:{}, 41:{},42:{},43:{},44:{},45:{},46:{},47:{},48:{},49:{},50:{}, 51:{},52:{},53:{},54:{},55:{},56:{},57:{},58:{},59:{}}
 let p2_place={'00':{},'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{},'09':{},10:{}, 11:{},12:{},13:{},14:{},15:{},16:{},17:{},18:{},19:{},10:{}, 21:{},22:{},23:{},24:{},25:{},26:{},27:{},28:{},29:{},30:{}, 31:{},32:{},33:{},34:{},35:{},36:{},37:{},38:{},39:{},40:{}, 41:{},42:{},43:{},44:{},45:{},46:{},47:{},48:{},49:{},50:{}, 51:{},52:{},53:{},54:{},55:{},56:{},57:{},58:{},59:{}}
 
 
-card = document.createElement('img');
-card.src = 'https://www.pokemon-card.com/assets/images/card_images/large/SV4a/045127_P_MIMIKKIXYU.jpg';
-card.style.width = 106.857142857142858 +"px";
-card.style.height = 149.428571428571429 +"px";
-card.style.top = 100+"px";
-card.style.left = 300+"px";
-card.style.position ="absolute"
+
 
 let card_put = document.getElementById("card_put");
-card_put.appendChild(card);
+
 
 function set() {
   Box = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
@@ -187,21 +181,22 @@ function draw(player){
 }
 
 
-function show(){
-  for (i=Object.keys(Show).length-1; i>=0;i-- ){
-    card=document.createElement("img")
-    if (Show[i]["fb"]==1){
-      card.src = `${testdeck[Number(Show[i]["id"])]['url']}`
-    }else if(Show[i]["fb"]==1){
-      card.src ="https://funamushi.net/pokeca_hitorimawashi/img/poke_ura.jpg"
-    }
-    card.style.position = "absolute"
-    card.width = 106.857142857142858
-    card.height = 149.428571428571429
-    card.style.top = Show[i]["y"]
-    card.style.left = Show[i]["x"]
+function show(i){
+  
+  card_img=document.createElement("img")
+  if (Show[i]["fb"]==1){
+    card_img.src = `${testdeck[Number(Show[i]["id"])]['url']}`
+  }else if(Show[i]["fb"]==0){
+    card_img.src ="https://funamushi.net/pokeca_hitorimawashi/img/poke_ura.jpg"
   }
+  card_img.style.position = "absolute"
+  card_img.width = 106.857142857142858 +"px"
+  card_img.height = 149.428571428571429 +"px"
+  card_img.style.top = Show[i]["y"] +"px"
+  card_img.style.left = Show[i]["x"] +"px"
+  card_put.appendChild(card_img);
 }
+
 
 
 
