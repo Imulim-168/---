@@ -48,10 +48,12 @@ let p2_Field = []
 let p2_Trash = []
 
 let rand
-let Show={59:{"id":59,"x":527,"y":527,"fb":1},0:{"id":"00","x":333,"y":321,"fb":1},5:{"id":"05","x":810,"y":777,"fb":0},8:{"id":"08","x":3,"y":111,"fb":0}}
+let Show={59:{"x":527,"y":527,"fb":1},0:{"x":333,"y":321,"fb":1},5:{"x":810,"y":777,"fb":0},8:{"x":3,"y":111,"fb":0}}
+let Show_id=[59,0,5,8]
 let card_img
 
-let p1_place={'00':{},'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{},'09':{},10:{}, 11:{},12:{},13:{},14:{},15:{},16:{},17:{},18:{},19:{},10:{}, 21:{},22:{},23:{},24:{},25:{},26:{},27:{},28:{},29:{},30:{}, 31:{},32:{},33:{},34:{},35:{},36:{},37:{},38:{},39:{},40:{}, 41:{},42:{},43:{},44:{},45:{},46:{},47:{},48:{},49:{},50:{}, 51:{},52:{},53:{},54:{},55:{},56:{},57:{},58:{},59:{}}
+
+
 let p2_place={'00':{},'01':{},'02':{},'03':{},'04':{},'05':{},'06':{},'07':{},'08':{},'09':{},10:{}, 11:{},12:{},13:{},14:{},15:{},16:{},17:{},18:{},19:{},10:{}, 21:{},22:{},23:{},24:{},25:{},26:{},27:{},28:{},29:{},30:{}, 31:{},32:{},33:{},34:{},35:{},36:{},37:{},38:{},39:{},40:{}, 41:{},42:{},43:{},44:{},45:{},46:{},47:{},48:{},49:{},50:{}, 51:{},52:{},53:{},54:{},55:{},56:{},57:{},58:{},59:{}}
 
 
@@ -181,32 +183,37 @@ function draw(player){
 }
 
 
-function show(i){
+function show(id){
   
   card_img=document.createElement("img")
-  if (Show[i]["fb"]==1){
-    card_img.src = testdeck[Number(Show[i]["id"])]["url"]
+  card_img.id=String(id)
+  if (Show[id]["fb"]==1){
+    card_img.src = testdeck[id]["url"]
   }else if(Show[i]["fb"]==0){
-    card_img.src ="https://funamushi.net/pokeca_hitorimawashi/img/poke_ura.jpg"
+    card_img.src ="img/poke_ura.jpg"
   }
   card_img.style.position = "absolute"
   card_img.style.width = 106.857142857142858 +"px"
   card_img.style.height = 149.428571428571429 +"px"
-  card_img.style.top = Show[i]["y"] +"px"
-  card_img.style.left = Show[i]["x"] +"px"
+  card_img.style.top = Show[id]["y"] +"px"
+  card_img.style.left = Show[id]["x"] +"px"
   card_put.appendChild(card_img)
-
-  return "gotu"
 }
 
 
 
-function move(){
+function move(id){
+  old_img=document.getElementById(id)
+  old_img.remove()
 
 
 }
 
 function put(id,x,y){
+  Show_id.push(id)
+  Show[id]["x"]=x
+  Show[id]["y"]=y
+  show(id)
 
 
 
