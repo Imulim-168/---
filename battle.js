@@ -1,5 +1,3 @@
-
-
 function deep_copy(itr){
   return JSON.parse(JSON.stringify(itr))
 }
@@ -20,15 +18,8 @@ function choose_at_random(arrayData, count) {
 }
 
 function log() {
-  console.log("p1")
-  console.log("D", p1_Deck)
-  console.log("H", p1_Hand)
-  console.log("S", p1_Side)
-
-  console.log("p2")
-  console.log("D", p2_Deck)
-  console.log("H", p2_Hand)
-  console.log("S", p2_Side)
+  console.log("show", Show)
+  console.log("show_id", Show_id)
 }
 
 
@@ -48,8 +39,8 @@ let p2_Field = []
 let p2_Trash = []
 
 let rand
-let Show={59:{"x":527,"y":527,"fb":1},0:{"x":333,"y":321,"fb":1},5:{"x":810,"y":777,"fb":0},8:{"x":3,"y":111,"fb":0}}
-let Show_id=[59,0,5,8]
+let Show={}
+let Show_id=[]
 let card_img
 
 
@@ -63,8 +54,7 @@ let card_put = document.getElementById("card_put");
 
 
 function set() {
-  Box = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
-
+  Box = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
   for (i = 7; i >= 1; i--) {
     rand = getRandomInt(Box.length)
     p1_Hand.push(Box[rand])
@@ -83,7 +73,7 @@ function set() {
     Box.splice(rand, 1)
   }
 
-  Box = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+  Box = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
 
   for (i = 7; i >= 1; i--) {
     rand = getRandomInt(Box.length)
@@ -106,7 +96,7 @@ function set() {
 
 function reset(player) {
 
-  Box = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
+  Box = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
 
   if (player == "p1") {
     p1_Hand = []
@@ -183,13 +173,31 @@ function draw(player){
 }
 
 
-function show(id){
-  
-  card_img=document.createElement("img")
+
+
+
+function show(id,look){
+  if(look==true){
+    const card_img=document.createElement("img")
+  card_img.id=String(id)
+  if (Show_look[id]["fb"]==1){
+    card_img.src = testdeck[id]["url"]
+  }else if(Show_look[id]["fb"]==-1){
+    card_img.src ="img/poke_ura.jpg"
+  }
+  card_img.style.position = "absolute"
+  card_img.style.width = 106.857142857142858 +"px"
+  card_img.style.height = 149.428571428571429 +"px"
+  card_img.style.top = Show_look[id]["y"] +"px"
+  card_img.style.left = Show_look[id]["x"] +"px"
+  card_put.appendChild(card_img)
+    return
+  }
+  const card_img=document.createElement("img")
   card_img.id=String(id)
   if (Show[id]["fb"]==1){
     card_img.src = testdeck[id]["url"]
-  }else if(Show[i]["fb"]==0){
+  }else if(Show[id]["fb"]==-1){
     card_img.src ="img/poke_ura.jpg"
   }
   card_img.style.position = "absolute"
@@ -202,37 +210,88 @@ function show(id){
 
 
 
-function move(id){
+function remove(id){//
   old_img=document.getElementById(id)
   old_img.remove()
-
-
+  delete Show[id]
+  const index = Show_id.indexOf(id)
+  if (index !== -1) {
+    Show_id.splice(index, 1)
+  }
 }
 
-function put(id,x,y){
+function put(id,x,y,fb){//
+  if (Show_id.includes(id)) {
+    remove(id) 
+  }
   Show_id.push(id)
+  if (!Show[id]) {
+    Show[id] = {}
+  }
   Show[id]["x"]=x
   Show[id]["y"]=y
+  Show[id]["fb"]=fb
   show(id)
-
-
-
-
 }
 
 
-function reverse(player,card_id){
-
-
-
+function reverse(card_id){//
+  Show[card_id]["fb"]*=-1
+  card_img=document.getElementById(card_id)
+  if (Show[card_id]["fb"]==1){
+    card_img.src = testdeck[card_id]["url"]
+  }else if(Show[card_id]["fb"]==-1){
+    card_img.src ="img/poke_ura.jpg"
+  }
 }
 
-function look(list,){
+let Show_look = {}
+function look(list){
+  Show_look = {};
+  const cardsPerRow = 12; // 1行あたりの枚数
+  const cardWidth = 110;  // 画像幅+余白
+  const cardHeight = 160; // 画像高さ+余白
 
+  // 表示領域の幅・高さを取得
+  const areaWidth = card_put.clientWidth;
+  const areaHeight = card_put.clientHeight;
+
+  const rowCount = Math.ceil(list.length / cardsPerRow);
+
+  // 全体のカード群の高さ
+  const totalHeight = rowCount * cardHeight;
+  // y方向の中央寄せオフセット
+  const offsetY = Math.max(0, (areaHeight - totalHeight) / 2);
+
+  for (let row = 0; row < rowCount; row++) {
+    // この行のカード数
+    const isLastRow = (row === rowCount - 1);
+    const cardsInThisRow = isLastRow && (list.length % cardsPerRow !== 0)
+      ? list.length % cardsPerRow
+      : cardsPerRow;
+
+    // この行のカード群の合計幅
+    const rowWidth = cardsInThisRow * cardWidth;
+    // この行の左端（中央寄せのためのオフセット）
+    const startX = Math.max(0, (areaWidth - rowWidth) / 2);
+
+    for (let col = 0; col < cardsInThisRow; col++) {
+      const i = row * cardsPerRow + col;
+      const id = list[i];
+      const x = col * cardWidth + startX;
+      const y = row * cardHeight + offsetY;
+
+      Show_look[id] = {};
+      Show_look[id]["x"] = x;
+      Show_look[id]["y"] = y;
+      Show_look[id]["fb"] = 1;
+      show(id, true);
+    }
+  }
 }
 
 
-function count(player,direction){
+function count(player,direction){//
   document.querySelector(`.p${player} .damageBox`).value = Number(document.querySelector(`.p${player} .damageBox`).value)+direction*10
 }
 

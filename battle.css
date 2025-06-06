@@ -369,3 +369,9 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+
+#card_put {
+  width: 1400px;
+  height: 800px;   /* ← 例: 必要な高さを指定 */
+  position: relative;
+}
