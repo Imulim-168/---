@@ -190,6 +190,7 @@ function show(id,look){
   card_img.style.height = 149.428571428571429 +"px"
   card_img.style.top = Show_look[id]["y"] +"px"
   card_img.style.left = Show_look[id]["x"] +"px"
+  card_img.style.zIndex = 2; // カード画像は2
   card_put.appendChild(card_img)
     return
   }
@@ -205,6 +206,7 @@ function show(id,look){
   card_img.style.height = 149.428571428571429 +"px"
   card_img.style.top = Show[id]["y"] +"px"
   card_img.style.left = Show[id]["x"] +"px"
+  card_img.style.zIndex = 2; // カード画像は2
   card_put.appendChild(card_img)
 }
 
@@ -247,32 +249,45 @@ function reverse(card_id){//
 
 let Show_look = {}
 function look(list){
-  Show_look = {};
-  const cardsPerRow = 12; // 1行あたりの枚数
-  const cardWidth = 110;  // 画像幅+余白
-  const cardHeight = 160; // 画像高さ+余白
+  while (card_put.firstChild) {
+    card_put.removeChild(card_put.firstChild);
+  }
 
-  // 表示領域の幅・高さを取得
+  Show_look = {};
+  const cardsPerRow = 12;
+  const cardWidth = 110;
+  const cardHeight = 160;
+
   const areaWidth = card_put.clientWidth;
   const areaHeight = card_put.clientHeight;
 
   const rowCount = Math.ceil(list.length / cardsPerRow);
-
-  // 全体のカード群の高さ
+  const lastRowCards = (list.length % cardsPerRow === 0) ? cardsPerRow : list.length % cardsPerRow;
+  const totalWidth = Math.max(cardsPerRow, lastRowCards) * cardWidth;
   const totalHeight = rowCount * cardHeight;
-  // y方向の中央寄せオフセット
+
+  const offsetX = Math.max(0, (areaWidth - totalWidth) / 2);
   const offsetY = Math.max(0, (areaHeight - totalHeight) / 2);
 
+  // --- 背景用の白いdivを一枚だけ追加 ---
+  const bg_div = document.createElement("div");
+  bg_div.style.position = "absolute";
+  bg_div.style.width = totalWidth + "px";
+  bg_div.style.height = totalHeight + "px";
+  bg_div.style.left = offsetX + "px";
+  bg_div.style.top = offsetY + "px";
+  bg_div.style.background = "#fff";
+  bg_div.style.zIndex = 1;
+  card_put.appendChild(bg_div);
+  // --- 背景ここまで ---
+
   for (let row = 0; row < rowCount; row++) {
-    // この行のカード数
     const isLastRow = (row === rowCount - 1);
     const cardsInThisRow = isLastRow && (list.length % cardsPerRow !== 0)
       ? list.length % cardsPerRow
       : cardsPerRow;
 
-    // この行のカード群の合計幅
     const rowWidth = cardsInThisRow * cardWidth;
-    // この行の左端（中央寄せのためのオフセット）
     const startX = Math.max(0, (areaWidth - rowWidth) / 2);
 
     for (let col = 0; col < cardsInThisRow; col++) {
